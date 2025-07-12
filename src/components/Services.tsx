@@ -70,7 +70,7 @@ const Services = () => {
 
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
+          {services.map((service, index) => {
             const IconComponent = iconMap[service.icon] || Brain;
             return (
             <div
@@ -109,7 +109,7 @@ const Services = () => {
               <div className={`absolute inset-0 bg-gradient-to-r ${service.color} opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-300 pointer-events-none`}></div>
             </div>
             );
-          ))}
+          })}
         </div>
 
         {/* CTA Section */}

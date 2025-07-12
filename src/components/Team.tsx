@@ -68,7 +68,7 @@ const Team = () => {
 
         {/* Team Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {teamMembers.map((member, index) => (
+          {teamMembers.map((member, index) => {
             const IconComponent = iconMap[member.icon] || Brain;
             return (
             <div
@@ -150,7 +150,7 @@ const Team = () => {
               </div>
             </div>
             );
-          ))}
+          })}
         </div>
 
         {/* Team Stats */}

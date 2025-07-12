@@ -100,7 +100,7 @@ const Pricing = () => {
 
         {/* Pricing Cards */}
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
-          {plans.map((plan, index) => (
+          {plans.map((plan, index) => {
             const IconComponent = iconMap[plan.icon] || Zap;
             return (
             <div
@@ -189,7 +189,7 @@ const Pricing = () => {
               <div className={`absolute inset-0 bg-gradient-to-r ${plan.color} opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-300 pointer-events-none`}></div>
             </div>
             );
-          ))}
+          })}
         </div>
 
         {/* Enterprise CTA */}
