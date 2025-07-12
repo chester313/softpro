@@ -72,6 +72,7 @@ const Services = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             const IconComponent = iconMap[service.icon] || Brain;
+            return (
             <div
               key={service.id}
               className={`cyber-card group hover:${service.glow_color} animate-scale-in`}
@@ -107,6 +108,7 @@ const Services = () => {
               {/* Hover Effect */}
               <div className={`absolute inset-0 bg-gradient-to-r ${service.color} opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-300 pointer-events-none`}></div>
             </div>
+            );
           ))}
         </div>
 
