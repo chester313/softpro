@@ -79,11 +79,14 @@ export interface AdminUser {
 // Admin authentication
 export const adminLogin = async (username: string, password: string) => {
   try {
+    console.log('Attempting login with:', { username, password });
     const { data, error } = await supabase
       .from('admin_users')
       .select('*')
       .eq('username', username)
       .single();
+
+    console.log('Database response:', { data, error });
 
     if (error || !data) {
       return { success: false, error: 'Invalid credentials' };
@@ -91,11 +94,14 @@ export const adminLogin = async (username: string, password: string) => {
 
     // Simple password check - check against stored password_hash
     if (password === data.password_hash) {
+      console.log('Login successful');
       return { success: true, user: data };
     }
 
+    console.log('Password mismatch:', { provided: password, stored: data.password_hash });
     return { success: false, error: 'Invalid credentials' };
   } catch (error) {
+    console.error('Login error:', error);
     return { success: false, error: 'Login failed' };
   }
 };
