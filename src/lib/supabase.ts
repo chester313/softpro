@@ -89,8 +89,8 @@ export const adminLogin = async (username: string, password: string) => {
       return { success: false, error: 'Invalid credentials' };
     }
 
-    // Simple password check (in production, use proper hashing)
-    if (password === 'admin123') {
+    // Simple password check - check against stored password_hash
+    if (password === data.password_hash) {
       return { success: true, user: data };
     }
 

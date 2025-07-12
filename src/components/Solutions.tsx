@@ -16,6 +16,8 @@ const Solutions = () => {
     const { data, error } = await crudOperations.solutions.getAll();
     if (data && !error) {
       setSolutions(data);
+    } else {
+      console.error('Error loading solutions:', error);
     }
     setIsLoading(false);
   };

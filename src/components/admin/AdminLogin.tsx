@@ -125,8 +125,8 @@ const AdminLogin = () => {
           {/* Demo Credentials */}
           <div className="mt-6 p-4 bg-gray-900/50 rounded-xl border border-gray-800">
             <p className="text-gray-400 text-sm mb-2 font-mono">Demo Credentials:</p>
-            <p className="text-cyan-400 text-sm font-mono">Username: admin</p>
-            <p className="text-cyan-400 text-sm font-mono">Password: admin123</p>
+            <p className="text-cyan-400 text-sm font-mono">Username: corvax</p>
+            <p className="text-cyan-400 text-sm font-mono">Password: corvax2025#6007</p>
           </div>
         </div>
       </div>
