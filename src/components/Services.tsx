@@ -29,6 +29,8 @@ const Services = () => {
     const { data, error } = await crudOperations.services.getAll();
     if (data && !error) {
       setServices(data);
+    } else {
+      console.error('Error loading services:', error);
     }
     setIsLoading(false);
   };

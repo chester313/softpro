@@ -27,6 +27,8 @@ const Team = () => {
     const { data, error } = await crudOperations.teamMembers.getAll();
     if (data && !error) {
       setTeamMembers(data);
+    } else {
+      console.error('Error loading team members:', error);
     }
     setIsLoading(false);
   };

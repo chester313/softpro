@@ -25,6 +25,8 @@ const Pricing = () => {
     const { data, error } = await crudOperations.pricingPlans.getAll();
     if (data && !error) {
       setPlans(data);
+    } else {
+      console.error('Error loading pricing plans:', error);
     }
     setIsLoading(false);
   };
